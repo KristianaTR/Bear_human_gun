@@ -1,7 +1,152 @@
+//colors
+$bg-color: #F0F0F3;
+$dot-color: rgba(137, 152, 197, 0.15);
+//dimensions
+$dot-size:4px;
+$dot-space:8px;
+
 body{
-    font-family: 'Redressed', cursive; 
+    font-family: 'Akaya Telivigala', cursive; 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-image: radial-gradient(
+        $bg-color 50%, 
+        transparent 20%),
+    radial-gradient(
+        $dot-color 50%,
+        transparent 10%),
+    ;
+    background-size: 10px 10px;
+    padding-top: 50px;
+}
+
+//starts choices part
+.choices_container{
+    max-width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+
+    .icon{
+        font-size: 60px;
+    }
+    
+}
+
+.choice{
+    width: 80px;
+    height: 80px;
+    border: solid 3px rgba(120, 160, 120, 0.87);
+    border-radius: 5px;
+    box-shadow: 0.5px 0.5px 1px rgba(113, 133, 113, 0.596),
+                inset -0.2px -0.2px 1px rgba(120, 120, 124, 0.966),
+                inset 0.2px 0.2px 1px rgba(120, 120, 124, 0.966);;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(174, 174, 192);
+
+    :hover {
+        cursor: pointer;
+        
+    }
+
+    :hover.icon{
+        //background-color: rgba(165, 42, 42, 0.87);
+        //background: content-box radial-gradient(brown, rgba(165, 42, 42, 0))
+        box-shadow: inset -10px -10px 10px rgba(180, 102, 102, 0.548),
+                    inset 10px 10px 10px rgba(180, 102, 102, 0.548);
+
+        transform: scale(1.5);
+    }
+
+    .icon{
+        transition: transform 1s;
+    }
+
+}
+
+// starts button Play
+.button_container{
+    max-width: 300px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+.button{
+    width: 300px;
+    height: 30px;
+   border: none;
+    border-radius: 5px;
+    box-shadow:0.2px 0.2px 1px rgba(174, 174, 192, 0.466),
+                inset -0.5px -0.5px 5px rgba(174, 174, 192, 0.466),
+                inset 0.5px 0.5px 5px rgba(174, 174, 192, 0.466); 
+    text-transform: uppercase;
+    font-family: 'Akaya Telivigala', cursive; 
+    font-weight: 600;
+    transition-property: box-shadow;
+    transition-duration: 4s;
+
+    &:hover{
+        cursor: pointer;
+        box-shadow: inset -5px -5px 10px rgba(108, 108, 116, 0.959),
+        inset 5px 5px 10px rgba(108, 108, 116, 0.959);
+        
+    }
+}
+//end button Play
+
+//starts results part
+.results_container{
+    display: grid;
+    grid-template-columns: 1fr  50px 1fr;
+    grid-template-rows: 3fr 2fr 2fr;
+
+    :nth-child(2){
+        font-size: 20px;
+        grid-area: 1/2/3/3;
+    }
+    :nth-child(4), :nth-child(5){
+      font-size: 10px;  
+    }
+    :nth-child(6){
+        font-size: 20px;
+        grid-area: 3/1/4/4;
+    }
+
+    .result{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+}
+
+.icon-user{
+    font-size: 30px;
+}
+.icon-computer{
+    font-size: 30px;
+}
+
+// end results part
+
+//starts button reset game
+.button_reset{
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    box-shadow:0.2px 0.2px 1px rgba(174, 174, 192, 0.466),
+                 inset -0.5px -0.5px 5px rgba(174, 174, 192, 0.466),
+                 inset 0.5px 0.5px 5px rgba(174, 174, 192, 0.466); ;
+    text-transform: uppercase;
+    font-family: 'Akaya Telivigala', cursive; 
+    font-weight: 600;
 }

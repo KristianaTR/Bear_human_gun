@@ -1,5 +1,5 @@
 body {
-  font-family: 'Redressed', cursive;
+  font-family: 'Akaya Telivigala', cursive;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,5 +13,164 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-image: radial-gradient(#F0F0F3 50%, transparent 20%), radial-gradient(rgba(137, 152, 197, 0.15) 50%, transparent 10%);
+  background-size: 10px 10px;
+  padding-top: 50px;
+}
+
+.choices_container {
+  max-width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0;
+}
+
+.choices_container .icon {
+  font-size: 60px;
+}
+
+.choice {
+  width: 80px;
+  height: 80px;
+  border: solid 3px rgba(120, 160, 120, 0.87);
+  border-radius: 5px;
+  -webkit-box-shadow: 0.5px 0.5px 1px rgba(113, 133, 113, 0.596), inset -0.2px -0.2px 1px rgba(120, 120, 124, 0.966), inset 0.2px 0.2px 1px rgba(120, 120, 124, 0.966);
+          box-shadow: 0.5px 0.5px 1px rgba(113, 133, 113, 0.596), inset -0.2px -0.2px 1px rgba(120, 120, 124, 0.966), inset 0.2px 0.2px 1px rgba(120, 120, 124, 0.966);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #aeaec0;
+}
+
+.choice :hover {
+  cursor: pointer;
+}
+
+.choice :hover.icon {
+  -webkit-box-shadow: inset -10px -10px 10px rgba(180, 102, 102, 0.548), inset 10px 10px 10px rgba(180, 102, 102, 0.548);
+          box-shadow: inset -10px -10px 10px rgba(180, 102, 102, 0.548), inset 10px 10px 10px rgba(180, 102, 102, 0.548);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.choice .icon {
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.button_container {
+  max-width: 300px;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.button {
+  width: 300px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 0.2px 0.2px 1px rgba(174, 174, 192, 0.466), inset -0.5px -0.5px 5px rgba(174, 174, 192, 0.466), inset 0.5px 0.5px 5px rgba(174, 174, 192, 0.466);
+          box-shadow: 0.2px 0.2px 1px rgba(174, 174, 192, 0.466), inset -0.5px -0.5px 5px rgba(174, 174, 192, 0.466), inset 0.5px 0.5px 5px rgba(174, 174, 192, 0.466);
+  text-transform: uppercase;
+  font-family: 'Akaya Telivigala', cursive;
+  font-weight: 600;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 4s;
+          transition-duration: 4s;
+}
+
+.button:hover {
+  cursor: pointer;
+  -webkit-box-shadow: inset -5px -5px 10px rgba(108, 108, 116, 0.959), inset 5px 5px 10px rgba(108, 108, 116, 0.959);
+          box-shadow: inset -5px -5px 10px rgba(108, 108, 116, 0.959), inset 5px 5px 10px rgba(108, 108, 116, 0.959);
+}
+
+.results_container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr  50px 1fr;
+      grid-template-columns: 1fr  50px 1fr;
+  -ms-grid-rows: 3fr 2fr 2fr;
+      grid-template-rows: 3fr 2fr 2fr;
+}
+
+.results_container :nth-child(2) {
+  font-size: 20px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1/2/3/3;
+}
+
+.results_container :nth-child(4), .results_container :nth-child(5) {
+  font-size: 10px;
+}
+
+.results_container :nth-child(6) {
+  font-size: 20px;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: 3/1/4/4;
+}
+
+.results_container .result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.icon-user {
+  font-size: 30px;
+}
+
+.icon-computer {
+  font-size: 30px;
+}
+
+.button_reset {
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 0.2px 0.2px 1px rgba(174, 174, 192, 0.466), inset -0.5px -0.5px 5px rgba(174, 174, 192, 0.466), inset 0.5px 0.5px 5px rgba(174, 174, 192, 0.466);
+          box-shadow: 0.2px 0.2px 1px rgba(174, 174, 192, 0.466), inset -0.5px -0.5px 5px rgba(174, 174, 192, 0.466), inset 0.5px 0.5px 5px rgba(174, 174, 192, 0.466);
+  text-transform: uppercase;
+  font-family: 'Akaya Telivigala', cursive;
+  font-weight: 600;
 }
 /*# sourceMappingURL=style.css.map */

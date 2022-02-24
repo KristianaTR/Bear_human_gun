@@ -6,23 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Redressed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./icomoon/icon-font.css">
     
 </head>
 <body>
     <h1>This is a game "Bear, Human, Gun"</h1>
-    <h3>Please enter human, bear or gun</h3>
+    <h3>Please choose human, bear or gun</h3>
+    <div class="container">
+        <div class="choices_container">
+            <div id="humanNew" class="choice">
+                <span class="icon-human icon"></span>
+            </div>
+            <div id="bear" class="choice">
+                <span class="icon-bear icon"></span>
+            </div>
+            <div id="gun" class="choice">
+                <span class="icon-gun icon"></span>
+            </div>
+        </div>
+        <div class="button_container">
+            <input class="button" type="button" onclick="playGame()" value="play"></input>
+        </div>
+        <div class="results_container">
+            <div class="result">
+                <span class="icon-user"></span>
+            </div>
+            <div class="result">vs</div>
+            <div class="result">
+                <span class="icon-computer"></span>
+            </div>
+            <div class="result">resulyt</div>
+            <div class="result">resultOth</div>
+            <div class="result"></div>
+        </div>
+        <div class="button_container">
+            <input class="button_reset" type="button" value="reset game"></input>
+        </div>
+
+    </div>
 
    
 
-    <form action="">
+   
         
-        <input type="text" class="userInput">
-        <input type="button" onclick="playGame()" value="enter"></input>
+        <!-- <input type="text" class="userInput"> -->
+        
 
 
-    </form>
+   
 </body>
 </html>
 

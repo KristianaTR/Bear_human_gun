@@ -1,12 +1,19 @@
+
+var userChoiceButton = document.querySelector('.choice');
+userChoiceButton.addEventListener('click', function(){
+    var userInput = userChoiceButton.getAttribute('id');
+    alert(userInput);
+});
+
+//userChoiceButton.addEventListener('click', getUserChoice );
+
+//document.querySelector('.choice').addEventListener('click',getUserChoice)
 function getUserChoice(){
-    var userInput = document.querySelector('.userInput').value.toLowerCase();
-    if (userInput === 'bear' || userInput === 'human' || userInput === 'gun'){
-        return userInput;
-    } 
-    else{
-        return 'Please enter a valid option';
-    }
-}
+
+   var userInput = userChoiceButton.getAttribute('id');
+    alert(userInput) ;
+   }
+
 
 function getComputerChoice(){
     var randomNumber = Math.floor(Math.random() * 3);
